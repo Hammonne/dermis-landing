@@ -1,0 +1,5 @@
+apps-script.gs
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
