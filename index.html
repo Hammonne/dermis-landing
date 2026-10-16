@@ -91,12 +91,19 @@
   .screen{width:100%;height:100%;background:var(--cream);border-radius:34px;overflow:hidden;display:flex;flex-direction:column;padding:26px 18px 18px;gap:12px}
   .scr-top{display:flex;justify-content:space-between;align-items:center}
   .scr-title{font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--clay)}
-  .scr-face{background:var(--peach);border-radius:20px;height:34%;display:flex;align-items:center;justify-content:center;position:relative}
+  .scr-face{background:var(--peach);border-radius:20px;height:24%;display:flex;align-items:center;justify-content:center;position:relative}
   .scr-tag{position:absolute;background:var(--white);border-radius:999px;padding:3px 10px;font-size:10.5px;font-weight:600;color:var(--clay-dark);box-shadow:0 4px 10px rgba(74,42,16,.08)}
+  .scr-streak{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:9px 12px;display:flex;align-items:center;gap:10px}
+  .scr-fire{width:32px;height:32px;border-radius:999px;background:var(--peach);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  .scr-streak b{display:block;font-size:12px;color:var(--brown)}
+  .scr-done{display:inline-block;margin-top:3px;font-size:9px;font-weight:600;color:var(--ok);background:#E7F1E9;border:1px solid #CDE3D2;border-radius:999px;padding:2px 8px}
   .scr-row{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;align-items:center;gap:10px}
   .scr-dot{width:30px;height:30px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--white)}
   .scr-row b{display:block;font-size:12px;color:var(--brown)}
   .scr-row small{display:block;font-size:10.5px;color:var(--muted);line-height:1.3}
+  .scr-total{margin-top:auto;display:flex;justify-content:space-between;align-items:center;background:var(--peach);border-radius:14px;padding:10px 14px}
+  .scr-total span{font-size:11px;font-weight:600;color:var(--clay-dark)}
+  .scr-total b{font-size:14px;color:var(--brown)}
 
   /* sections */
   section{padding:84px 0}
@@ -221,14 +228,19 @@
           <span class="scr-title">TU RUTINA</span>
           <svg width="20" height="22" viewBox="0 0 60 64"><path d="M6 4 H26 A28 28 0 0 1 26 60 H6 Z" fill="none" stroke="#4A2A10" stroke-width="6"/><path d="M13 13 H26 A19 19 0 0 1 26 51 H13" fill="none" stroke="#E5B485" stroke-width="8"/></svg>
         </div>
+        <div class="scr-streak">
+          <div class="scr-fire">🔥</div>
+          <div><b>1 día de racha</b><span class="scr-done">¡Rutina de hoy completada! 🎉</span></div>
+        </div>
         <div class="scr-face">
-          <svg width="92" height="112" viewBox="0 0 92 112"><ellipse cx="46" cy="54" rx="36" ry="46" fill="#F1D3BB"/><path d="M10 46c4-30 22-42 36-42s32 12 36 42c-8-14-20-22-36-22S18 32 10 46z" fill="#7E3B20"/><circle cx="33" cy="58" r="3" fill="#4A2A10"/><circle cx="59" cy="58" r="3" fill="#4A2A10"/><path d="M38 78c5 4 11 4 16 0" stroke="#A4512F" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
-          <span class="scr-tag" style="top:14px;left:12px">Piel mixta</span>
-          <span class="scr-tag" style="bottom:16px;right:10px">Acné leve</span>
+          <svg width="76" height="92" viewBox="0 0 92 112"><ellipse cx="46" cy="54" rx="36" ry="46" fill="#F1D3BB"/><path d="M10 46c4-30 22-42 36-42s32 12 36 42c-8-14-20-22-36-22S18 32 10 46z" fill="#7E3B20"/><circle cx="33" cy="58" r="3" fill="#4A2A10"/><circle cx="59" cy="58" r="3" fill="#4A2A10"/><path d="M38 78c5 4 11 4 16 0" stroke="#A4512F" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+          <span class="scr-tag" style="top:12px;left:12px">Piel mixta</span>
+          <span class="scr-tag" style="bottom:12px;right:10px">Acné leve</span>
         </div>
         <div class="scr-row"><div class="scr-dot" style="background:#C98A62">1</div><div><b>Limpiar</b><small>Gel limpiador con ácido salicílico</small></div></div>
         <div class="scr-row"><div class="scr-dot" style="background:#A4512F">2</div><div><b>Tratar</b><small>Sérum con niacinamida</small></div></div>
         <div class="scr-row"><div class="scr-dot" style="background:#7E3B20">3</div><div><b>Proteger</b><small>Protector solar SPF 50</small></div></div>
+        <div class="scr-total"><span>Total de la rutina</span><b>S/ 164.90</b></div>
       </div>
     </div>
   </div>
@@ -371,7 +383,7 @@
 <footer>
   <div class="wrap foot">
     <div class="brand">
-      <svg aria-hidden="true" width="28" height="30" viewBox="0 0 60 64"><path d="M6 4 H26 A28 28 0 0 1 26 60 H6 Z" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/><path d="M13 13 H26 A19 19 0 0 1 26 51 H13" fill="none" stroke="#F1D9BC" stroke-width="7"/></svg>
+      <svg aria-hidden="true" width="28" height="30" viewBox="0 0 60 64"><path d="M6 4 H26 A28 28 0 0 1 26 60 H6 Z" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/><path d="M13 13 H26 A19 19 0 0 1 26 51 H13" fill="none" stroke="#E5B485" stroke-width="7"/><path d="M13 24 H26 A8 8 0 0 1 26 40 H13" fill="none" stroke="#F1D9BC" stroke-width="6"/></svg>
       <span style="color:#fff;font-size:18px">DERMIS</span>
     </div>
     <small>Cuidar tu piel no tiene que ser difícil ni costoso. · UTEC, Lima · <a href="mailto:jimena.gurbillon@utec.edu.pe">jimena.gurbillon@utec.edu.pe</a></small>
